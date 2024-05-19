@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>choas</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="https://cdn.plot.ly/plotly-2.9.0.min.js"></script>
+    <script type="module" src="script.js"></script>
+    <p>Chaos:</p>
+    <p>One common misconception about chaos is that it is completely random when in fact, it is pseudorandom</p>
+    <p>For instance we can see how a number defined by many structures like a population of rabbit can be chaotic.</p>
+    <p>Here I use the logistic map equation xₙ₊₁ = rxₙ(1-xₙ) where xₙ₊₁ is the population of rabbits next year (x is current population and n is the current iteration) and r is the growth rate of the rabbit population</p>
+    <p>This is when r is 2.9, in this example the population starts at 40% of what is possible and due to a high growth rate spikes. But because of the (1-xₙ) the growth is limited like in real life with the environment proving a threat. The growth begins to go back and forth before reaching an equilibrium of a population of 61.538%</p>
+    <div id="point_graph" style="width:800px;height:600px;"></div>
+    <p>However if we modify the growth rate(r) from 2.9 => 3.2 something pretty interesting occurs, the population is unable to settle on one value and begins to oscillating between two values</p>
+    <div id="point_graph1" style="width:800px;height:600px;"></div>
+    <p>if we increase r again 3.2 => 3.5 the oscillations switch from 2 values to 4 values. this growth is actually exponential and if we where to increase r again we would see it going between 16 then 256 and onward</p>
+    <div id="point_graph12" style="width:800px;height:600px;"></div>
+    <p>Once r crosses 3.57 The population becomes chaotic, you think you can see patterns but they ar not the same for every instance you think you see</p>
+    <div id="point_graph2" style="width:800px;height:600px;"></div>
+    <p>This is a graph of the population for different values of r(starting population of 40%) from r = 1 to r = 3 the value is single, increasing as r increases. After 3 the double oscillation is visible and then then you can see the oscillations increase exponentially until going to 3.57 where you can see the results become chaotic.</p>
+        <p>This may take a moment to load your processor is doing ~12000 calculations rn and then rendering each result on the graph</p>
+    <div id="final" style="width:1000px;height:700px;"></div>
+  </body>
+</html>
